@@ -35,7 +35,7 @@ public class Main {
 			ps = System.out;			// default output to Stdout
 		}
 		initialize();
-		
+		// test commit
 		// TODO methods to read in words, output ladder
 	}
 	
