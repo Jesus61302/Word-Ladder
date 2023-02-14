@@ -73,10 +73,7 @@ public class Main {
     
 	
 	public static void printLadder(ArrayList<String> ladder) {
-		if(ladder == null){
-			return;
-		}
-		else if(ladder.size() == 2){
+		if(ladder.size() == 2){
 			System.out.println("no word ladder can be found between " + ladder.get(0).toLowerCase() + " and " + ladder.get(1).toLowerCase() + ".");
 		}
 		else{
