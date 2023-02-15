@@ -3,6 +3,8 @@ package assignment3;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+
 import java.util.Arrays;
 
 import static org.junit.Assert.*;
@@ -11,7 +13,6 @@ public class MainTest {
 
     @Test
     public void main() {
-
     }
 
     @Test
@@ -20,6 +21,13 @@ public class MainTest {
 
     @Test
     public void parse() {
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input two Words to generate word ladder: ");
+        String inString = in.next(); // stores input as a string
+        System.out.println(inString);
+        ArrayList<String> input = Main.parse(in);
+        System.out.println(input);
     }
 
     @Test
@@ -31,7 +39,7 @@ public class MainTest {
     }
 
     @Test
-    public void printLadder1() {
+    public void printLadder() {
         ArrayList<String> ladder = new ArrayList<String>();
         ladder.add("smart");
         ladder.add("start");
@@ -53,6 +61,11 @@ public class MainTest {
                 System.out.println(ladder.get(i).toLowerCase());
             }
         }
+
+    }
+    @Test
+    public void printLadder1() {
+
     }
 
     @Test

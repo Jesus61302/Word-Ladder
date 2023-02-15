@@ -1,9 +1,5 @@
 package assignment3;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -18,6 +14,8 @@ import org.junit.Test;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.rules.Timeout;
+
+import static org.junit.Assert.*;
 
 /**
  * This is the sample test cases for students
@@ -97,7 +95,7 @@ public class SampleTest {
 	public void testParseQuit() {
 		String quit = "/quit";
 		Scanner scan = new Scanner(quit);
-		assertEquals(null, Main.parse(scan));
+        assertNull(Main.parse(scan));
 	}
     /**
      * Has Word Ladder

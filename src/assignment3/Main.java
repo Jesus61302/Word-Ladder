@@ -19,7 +19,7 @@ import java.io.*;
 
 public class Main {
 	
-	// static variables and constants only here.
+	Boolean quit;
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -35,8 +35,13 @@ public class Main {
 			ps = System.out;			// default output to Stdout
 		}
 		initialize();
-		// test commit
+		// test parse
 		// TODO methods to read in words, output ladder
+		while (true){
+			ArrayList<String> input = Main.parse(kb);
+			System.out.println(input);
+		}
+
 	}
 	
 	public static void initialize() {
@@ -51,8 +56,33 @@ public class Main {
 	 * If command is /quit, return null. 
 	 */
 	public static ArrayList<String> parse(Scanner keyboard) {
-		// TO DO
-		return null;
+		// initializes variables that will be used in loop
+		Boolean isValid = false;
+		ArrayList<String> input2 = new ArrayList<>();
+		List<String> input = new ArrayList<>(); //creates array list that will be used to store input words
+		String inString;
+		String [] arr;
+
+		// loop that continues to ask for inputs
+		while(!isValid){
+			System.out.println("Input two Words to generate word ladder: ");
+			inString = keyboard.nextLine(); // stores input as a string
+			arr = inString.split(" ");
+			input = Arrays.asList(arr); // changes the  array of input strings into a list;
+			input2.addAll(input);
+			input2.removeIf(el -> el.equals("")); //removes all empty elements(for when more than one space is entered during input)
+			isValid = true;
+		 	if (input2.contains("/quit")) {
+				return null;
+			}
+			if (input2.size() != 2) {
+				isValid = false;
+				System.out.println("Invalid entry");
+
+			}
+		}
+
+		return input2;
 	}
 	
 	public static ArrayList<String> getWordLadderDFS(String start, String end) {
