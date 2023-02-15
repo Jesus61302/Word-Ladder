@@ -19,7 +19,8 @@ import java.io.*;
 
 public class Main {
 	
-	Boolean quit;
+	static Boolean quit;
+	static Set<String> dict;
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -37,17 +38,34 @@ public class Main {
 		initialize();
 		// test parse
 		// TODO methods to read in words, output ladder
-		while (true){
+
+
+		while(!Main.quit){
 			ArrayList<String> input = Main.parse(kb);
 			System.out.println(input);
+			if (input == null){
+				Main.quit = true;
+				continue;
+			}
+
+
 		}
+
+
+
+
+
+
 
 	}
 	
 	public static void initialize() {
+
 		// initialize your static variables or constants here.
 		// We will call this method before running our JUNIT tests.  So call it 
 		// only once at the start of main.
+//		dict = makeDictionary();
+		quit = false;
 	}
 	
 	/**
@@ -63,19 +81,19 @@ public class Main {
 		String inString;
 		String [] arr;
 
-		// loop that continues to ask for inputs
+		// loop that continues to ask for inputs until valid submission
 		while(!isValid){
 			System.out.println("Input two Words to generate word ladder: ");
-			inString = keyboard.nextLine(); // stores input as a string
+			inString = keyboard.nextLine().toUpperCase(); // stores input as a string
 			arr = inString.split(" ");
 			input = Arrays.asList(arr); // changes the  array of input strings into a list;
 			input2.addAll(input);
 			input2.removeIf(el -> el.equals("")); //removes all empty elements(for when more than one space is entered during input)
 			isValid = true;
-		 	if (input2.contains("/quit")) {
+		 	if (input2.contains("/QUIT")) { // checks if user input was /quit
 				return null;
 			}
-			if (input2.size() != 2) {
+			if (input2.size() != 2) { //makes sure only two words were inputted
 				isValid = false;
 				System.out.println("Invalid entry");
 
