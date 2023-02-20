@@ -47,8 +47,8 @@ public class Main {
 				continue;
 			}
 			ArrayList<String> BFSLadder = getWordLadderBFS(input.get(0) , input.get(1));
-
-
+			System.out.println(BFSLadder.toString());
+			printLadder(BFSLadder);
 
 		}
 
@@ -85,7 +85,7 @@ public class Main {
 		// loop that continues to ask for inputs until valid submission
 		while(!isValid){
 			System.out.println("Input two Words to generate word ladder: ");
-			inString = keyboard.nextLine().toUpperCase(); // stores input as a string
+			inString = keyboard.nextLine().toLowerCase(); // stores input as a string
 			arr = inString.split(" ");
 			input = Arrays.asList(arr); // changes the  array of input strings into a list;
 			input2.addAll(input);
@@ -132,7 +132,7 @@ public class Main {
 		while(!traversal.isEmpty()){
 			current = traversal.remove();
 			if (end.equals(current)){
-				return backtrack(visited, start,end);
+				return backtrack(visited, end,start);
 			}
 			words = differByOneList(current);
 			for(int i = 0; i < words.size(); i++){
@@ -144,8 +144,8 @@ public class Main {
 
 
 		}
-		ladder.add(start);
-		ladder.add(end);
+		ladder.add(start.toLowerCase());
+		ladder.add(end.toLowerCase());
 		return ladder;
 	}
     
@@ -164,26 +164,26 @@ public class Main {
 
 
 	//Returns true if the word only differs by one letter
-	private static Boolean differsByOne(String one, String two){
-		int differences = 0;
-		for(int i = 0; i < one.length(); i++){
-			if(one.charAt(i) != two.charAt(i)){
-				differences++;
-			}
-		}if(differences == 1){
-			return true;
-		}
-		return false;
-	}
+//	private static Boolean differsByOne(String one, String two){
+//		int differences = 0;
+//		for(int i = 0; i < one.length(); i++){
+//			if(one.charAt(i) != two.charAt(i)){
+//				differences++;
+//			}
+//		}if(differences == 1){
+//			return true;
+//		}
+//		return false;
+//	}
 
 	//creates and returns a list of words that differ by only one letter to the given word
-	private static ArrayList<String> differByOneList(String word){
+	public static ArrayList<String> differByOneList(String word){
 		ArrayList<String> differList = new ArrayList<>();
 		Set<String> added = new HashSet<>();
 		added.add(word);
 		char[] temp = word.toCharArray();
 		String temp2 = word;
-		char[] alphabet = new char[]{'A','B','C','D','E','F','G','H','I','J','k','L','M','N' +
+		char[] alphabet = new char[]{'A','B','C','D','E','F','G','H','I','J','k','L','M','N',+
 				'O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 
 		for(int i = 0; i < temp.length; i++){
@@ -214,7 +214,7 @@ public class Main {
 			parent = parents.get(parent);
 		}
 		while(!stk.empty()){
-			ladder.add(stk.pop());
+			ladder.add(stk.pop().toLowerCase());
 		}
 		return ladder;
 	}

@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996a1987-462c-4a94-9487-b44cd7563e5d" name="Changes" comment="made parse method return  the list of words in all caps">
+    <list default="true" id="996a1987-462c-4a94-9487-b44cd7563e5d" name="Changes" comment="completed BFS(Untested version)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/assignment3/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/assignment3/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assignment3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment3/Main.java" afterDir="false" />
@@ -102,7 +102,7 @@
       <recent name="assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.differByOneList1">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="assignment3.Main" />
       <module name="Project3_Word_Laddder" />
@@ -116,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.differByOneList1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.listTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -126,13 +126,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
       <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
-      <option name="METHOD_NAME" value="differByOneList1" />
+      <option name="METHOD_NAME" value="listTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.differsByOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SampleTest.testBFS1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -141,14 +141,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
-      <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
-      <option name="METHOD_NAME" value="differsByOne" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.SampleTest" />
+      <option name="METHOD_NAME" value="testBFS1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.differsByOne2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SampleTest.testBFS2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -157,14 +157,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
-      <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
-      <option name="METHOD_NAME" value="differsByOne2" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.SampleTest" />
+      <option name="METHOD_NAME" value="testBFS2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.differsByOne3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SampleTest.testParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -173,8 +173,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
-      <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
-      <option name="METHOD_NAME" value="differsByOne3" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.SampleTest" />
+      <option name="METHOD_NAME" value="testParse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest.differByOneList1" />
-        <item itemvalue="JUnit.MainTest.differsByOne3" />
-        <item itemvalue="JUnit.MainTest.differsByOne" />
-        <item itemvalue="JUnit.MainTest.differsByOne2" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SampleTest.testParse" />
+        <item itemvalue="JUnit.SampleTest.testBFS2" />
+        <item itemvalue="JUnit.SampleTest.testBFS1" />
+        <item itemvalue="JUnit.MainTest.listTest" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +202,7 @@
       <workItem from="1676313402729" duration="4923000" />
       <workItem from="1676335565652" duration="20454000" />
       <workItem from="1676487873721" duration="29000" />
-      <workItem from="1676837243980" duration="21023000" />
+      <workItem from="1676837243980" duration="24705000" />
     </task>
     <task id="LOCAL-00001" summary="Starter Code">
       <created>1676109483137</created>
@@ -232,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676432825696</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="completed BFS(Untested version)">
+      <created>1676868416459</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676868416459</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +273,31 @@
     <MESSAGE value="Reorganization of Files" />
     <MESSAGE value="completed Parse method." />
     <MESSAGE value="made parse method return  the list of words in all caps" />
-    <option name="LAST_COMMIT_MESSAGE" value="made parse method return  the list of words in all caps" />
+    <MESSAGE value="completed BFS(Untested version)" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed BFS(Untested version)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/assignment3/Main.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tests/assignment3/MainTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="temp2" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="visited" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
