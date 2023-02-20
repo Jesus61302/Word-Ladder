@@ -7,8 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996a1987-462c-4a94-9487-b44cd7563e5d" name="Changes" comment="completed Parse method.">
+    <list default="true" id="996a1987-462c-4a94-9487-b44cd7563e5d" name="Changes" comment="made parse method return  the list of words in all caps">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/assignment3/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/assignment3/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assignment3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment3/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,31 +63,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_opened_file_path": "C:/Users/jesus/ProgrammingProjects/Software design and Implementation 2/Project2_Mastermind",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jesus/ProgrammingProjects/Software design and Implementation 2/Project2_Mastermind&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jesus\ProgrammingProjects\Software design and Implementation 2\Project3_Word_Laddder\src\assignment3" />
@@ -101,7 +102,7 @@
       <recent name="assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MainTest.differByOneList1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="assignment3.Main" />
       <module name="Project3_Word_Laddder" />
@@ -115,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.parse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.differByOneList1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -125,13 +126,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
       <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
-      <option name="METHOD_NAME" value="parse" />
+      <option name="METHOD_NAME" value="differByOneList1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SampleTest.testParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.differsByOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -140,8 +141,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
-      <option name="MAIN_CLASS_NAME" value="assignment3.SampleTest" />
-      <option name="METHOD_NAME" value="testParse" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
+      <option name="METHOD_NAME" value="differsByOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.differsByOne2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3_Word_Laddder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignment3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assignment3" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
+      <option name="METHOD_NAME" value="differsByOne2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.differsByOne3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3_Word_Laddder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignment3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assignment3" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
+      <option name="METHOD_NAME" value="differsByOne3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,9 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest.differByOneList1" />
+        <item itemvalue="JUnit.MainTest.differsByOne3" />
+        <item itemvalue="JUnit.MainTest.differsByOne" />
+        <item itemvalue="JUnit.MainTest.differsByOne2" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.SampleTest.testParse" />
-        <item itemvalue="JUnit.MainTest.parse" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +200,9 @@
       <updated>1676108806115</updated>
       <workItem from="1676108807512" duration="1562000" />
       <workItem from="1676313402729" duration="4923000" />
-      <workItem from="1676335565652" duration="20172000" />
+      <workItem from="1676335565652" duration="20454000" />
+      <workItem from="1676487873721" duration="29000" />
+      <workItem from="1676837243980" duration="21023000" />
     </task>
     <task id="LOCAL-00001" summary="Starter Code">
       <created>1676109483137</created>
@@ -188,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676426771174</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="made parse method return  the list of words in all caps">
+      <created>1676432825696</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676432825696</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +265,7 @@
     <MESSAGE value="Starter Code" />
     <MESSAGE value="Reorganization of Files" />
     <MESSAGE value="completed Parse method." />
-    <option name="LAST_COMMIT_MESSAGE" value="completed Parse method." />
+    <MESSAGE value="made parse method return  the list of words in all caps" />
+    <option name="LAST_COMMIT_MESSAGE" value="made parse method return  the list of words in all caps" />
   </component>
 </project>
