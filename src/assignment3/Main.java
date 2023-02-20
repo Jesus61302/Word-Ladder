@@ -105,12 +105,12 @@ public class Main {
 	}
 	
 	public static ArrayList<String> getWordLadderDFS(String start, String end) {
+		ArrayList<String> ladder = new ArrayList<>();
+		Set<String> visited = new HashSet<>();
+		ladder = getWordLadderDFSsupport(visited,start,end);
+
 		
-		// Returned list should be ordered start to end.  Include start and end.
-		// If ladder is empty, return list with just start and end.
-		// TODO some code
-		
-		return null; // replace this line later with real return
+		return ladder; // replace this line later with real return
 	}
 	
     public static ArrayList<String> getWordLadderBFS(String start, String end) {
@@ -162,19 +162,35 @@ public class Main {
 		}
 	}
 
+	public static ArrayList<String> getWordLadderDFSsupport(Set<String> visited, String start, String end){
+		ArrayList<String> ladder = new ArrayList<>();
+		ArrayList<String> words;
+		Map<String,Integer> differenceCount = new HashMap<>();
+		ladder.add(start);
+		if(end.equals(start)){
+			return ladder;
+		}
+		words = differByOneList(start);
+		for (int i = 0; i < words.size(); i++){
+			if(!visited.contains(words.get(i))){
+				visited.add(words.get(i));
+				differenceCount.put(words.get(i),difference(end, words.get(i)));
+			}
+		}
+		return ladder;
+	}
+
 
 	//Returns true if the word only differs by one letter
-//	private static Boolean differsByOne(String one, String two){
-//		int differences = 0;
-//		for(int i = 0; i < one.length(); i++){
-//			if(one.charAt(i) != two.charAt(i)){
-//				differences++;
-//			}
-//		}if(differences == 1){
-//			return true;
-//		}
-//		return false;
-//	}
+	private static int difference(String one, String two){
+		int differences = 0;
+		for(int i = 0; i < one.length(); i++) {
+			if (one.charAt(i) != two.charAt(i)) {
+				differences++;
+			}
+		}
+		return differences;
+	}
 
 	//creates and returns a list of words that differ by only one letter to the given word
 	public static ArrayList<String> differByOneList(String word){
