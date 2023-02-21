@@ -1,15 +1,15 @@
 /* WORD LADDER Main.java
  * EE422C Project 3 submission by
  * Replace <...> with your actual data.
- * <Student1 Name>
- * <Student1 EID>
- * <Student1 5-digit Unique No.>
- * <Student2 Name>
- * <Student2 EID>
- * <Student2 5-digit Unique No.>
- * Slip days used: <0>
- * Git URL:
- * Spring 2022
+ * Jesus Hernandez
+ * jh69848
+ * 17155
+ * Patrick Nwabue
+ * pcn339
+ * 17160
+ * Slip days used: 0
+ * Git URL: https://github.com/Jesus61302/Word-Ladder
+ * Spring 2023
  */
 
 
@@ -51,14 +51,8 @@ public class Main {
 				continue;
 			}
 			ArrayList<String> BFSLadder = getWordLadderBFS(input.get(0) , input.get(1));
-			System.out.println("This is BFS Ladder");
-			System.out.println(BFSLadder.toString());
 			printLadder(BFSLadder);
-			System.out.println();
-			System.out.println("This is DFS Ladder");
-			ArrayList<String> DFSLadder = getWordLadderDFS(input.get(0) , input.get(1));
-			System.out.println(BFSLadder.toString());
-			printLadder(BFSLadder);
+
 
 		}
 
@@ -101,7 +95,7 @@ public class Main {
 			input2.addAll(input);
 			input2.removeIf(el -> el.equals("")); //removes all empty elements(for when more than one space is entered during input)
 			isValid = true;
-		 	if (input2.contains("/QUIT")) { // checks if user input was /quit
+		 	if (input2.contains("/quit")) { // checks if user input was /quit
 				return null;
 			}
 			if (input2.size() != 2) { //makes sure only two words were inputted
@@ -191,7 +185,7 @@ public class Main {
 		}
 	}
 
-	public static ArrayList<String> getWordLadderDFSsupport(ArrayList<String> ladder ,Set<String> visited, String start, String end){
+	private static ArrayList<String> getWordLadderDFSsupport(ArrayList<String> ladder ,Set<String> visited, String start, String end){
 		ArrayList<String> words;
 		Map<String, Integer> differenceCount = new TreeMap<>();
 		ladder.add(start.toLowerCase());
@@ -253,7 +247,7 @@ public class Main {
 	}
 
 	//creates and returns a list of words that differ by only one letter to the given word
-	public static ArrayList<String> differByOneList(String word){
+	private static ArrayList<String> differByOneList(String word){
 		ArrayList<String> differList = new ArrayList<>();
 		Set<String> added = new HashSet<>();
 		added.add(word);
@@ -302,7 +296,7 @@ public class Main {
 		Set<String> words = new HashSet<String>();
 		Scanner infile = null;
 		try {
-			infile = new Scanner (new File("src/assignment3/five_letter_words.txt")); //delete SRC when testing on Linux
+			infile = new Scanner (new File("assignment3/five_letter_words.txt")); //delete SRC when testing on Linux
 		} catch (FileNotFoundException e) {
 			System.out.println("Dictionary File not Found!");
 			e.printStackTrace();

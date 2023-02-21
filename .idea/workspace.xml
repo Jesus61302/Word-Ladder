@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996a1987-462c-4a94-9487-b44cd7563e5d" name="Changes" comment="Dfs completed(Untested)">
+    <list default="true" id="996a1987-462c-4a94-9487-b44cd7563e5d" name="Changes" comment="Dfs completed(all test cases passed)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/assignment3/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/assignment3/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assignment3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment3/Main.java" afterDir="false" />
@@ -102,21 +102,8 @@
       <recent name="assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="assignment3.Main" />
-      <module name="Project3_Word_Laddder" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="assignment3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.listTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SampleTest">
+    <configuration name="SampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -125,25 +112,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
-      <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
-      <option name="METHOD_NAME" value="listTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project3_Word_Laddder" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="assignment3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="assignment3" />
-      <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
-      <option name="METHOD_NAME" value="main" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.SampleTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,7 +134,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SampleTest.testParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SampleTest.testDFS1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -174,7 +144,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
       <option name="MAIN_CLASS_NAME" value="assignment3.SampleTest" />
-      <option name="METHOD_NAME" value="testParse" />
+      <option name="METHOD_NAME" value="testDFS1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleTest.testDFS2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3_Word_Laddder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignment3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assignment3" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.SampleTest" />
+      <option name="METHOD_NAME" value="testDFS2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleTest.testPrintLadder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3_Word_Laddder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignment3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assignment3" />
+      <option name="MAIN_CLASS_NAME" value="assignment3.SampleTest" />
+      <option name="METHOD_NAME" value="testPrintLadder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MainTest.listTest" />
-        <item itemvalue="JUnit.MainTest.main" />
-        <item itemvalue="JUnit.SampleTest.testParse" />
+        <item itemvalue="JUnit.SampleTest" />
+        <item itemvalue="JUnit.SampleTest.testPrintLadder" />
+        <item itemvalue="JUnit.SampleTest.testDFS2" />
         <item itemvalue="JUnit.SampleTest.testBFS2" />
+        <item itemvalue="JUnit.SampleTest.testDFS1" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +204,7 @@
       <workItem from="1676313402729" duration="4923000" />
       <workItem from="1676335565652" duration="20454000" />
       <workItem from="1676487873721" duration="29000" />
-      <workItem from="1676837243980" duration="40734000" />
+      <workItem from="1676837243980" duration="42881000" />
     </task>
     <task id="LOCAL-00001" summary="Starter Code">
       <created>1676109483137</created>
@@ -260,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676948621668</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Dfs completed(all test cases passed)">
+      <created>1676953667709</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676953667709</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +307,8 @@
     <MESSAGE value="completed BFS(all test cases passed). fixed minor bugs" />
     <MESSAGE value="DFS started" />
     <MESSAGE value="Dfs completed(Untested)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dfs completed(Untested)" />
+    <MESSAGE value="Dfs completed(all test cases passed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dfs completed(all test cases passed)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -312,11 +322,6 @@
           <url>file://$PROJECT_DIR$/Tests/assignment3/MainTest.java</url>
           <line>15</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/assignment3/Main.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
