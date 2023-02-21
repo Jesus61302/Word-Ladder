@@ -2,10 +2,9 @@ package assignment3;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
-import java.util.Arrays;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.junit.Assert.*;
 
@@ -13,10 +12,24 @@ public class MainTest {
 
     @Test
     public void main() {
+        Map<String, Integer> test = new TreeMap<>();
+        test.put("HEllO", 4);
+        test.put("JEllO", 3);
+        test.put("CELLO" , 3);
+        test.put("STARE" , 2);
+
+        Map<String, Integer> sorted =
+                test.entrySet()
+                        .stream().sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                        .collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
+
+        System.out.println(sorted.toString());
+
     }
 
     @Test
     public void initialize() {
+
     }
 
     @Test

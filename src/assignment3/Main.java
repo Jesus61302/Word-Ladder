@@ -14,8 +14,12 @@
 
 
 package assignment3;
+import jdk.internal.util.xml.impl.Pair;
+
 import java.util.*;
 import java.io.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 	
@@ -165,18 +169,37 @@ public class Main {
 	public static ArrayList<String> getWordLadderDFSsupport(Set<String> visited, String start, String end){
 		ArrayList<String> ladder = new ArrayList<>();
 		ArrayList<String> words;
-		Map<String,Integer> differenceCount = new HashMap<>();
+		Map<String, Integer> differenceCount = new TreeMap<>();
 		ladder.add(start);
+		visited.add(start);
+
+
+
 		if(end.equals(start)){
 			return ladder;
 		}
 		words = differByOneList(start);
 		for (int i = 0; i < words.size(); i++){
 			if(!visited.contains(words.get(i))){
-				visited.add(words.get(i));
 				differenceCount.put(words.get(i),difference(end, words.get(i)));
 			}
 		}
+		//Sort the values in the map by value.
+		// code below was made refrencing code found at https://javarevisited.blogspot.com/2017/09/java-8-sorting-hashmap-by-values-in.html#axzz7tukQ4emY
+		differenceCount = differenceCount.entrySet().stream().sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+						.collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
+
+		//back to my own code
+
+		String[] sortedKeys = differenceCount.keySet().toArray(new String[differenceCount.size()]);
+
+
+		for (int i = 0; i< sortedKeys.length; i++){
+			ladder = getWordLadderDFSsupport(visited, sortedKeys[i] , end);
+
+		}
+		ladder.remove(ladder.size() - 1);
+
 		return ladder;
 	}
 

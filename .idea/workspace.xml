@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996a1987-462c-4a94-9487-b44cd7563e5d" name="Changes" comment="completed BFS(Untested version)">
+    <list default="true" id="996a1987-462c-4a94-9487-b44cd7563e5d" name="Changes" comment="DFS started">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/assignment3/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/assignment3/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assignment3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment3/Main.java" afterDir="false" />
@@ -102,7 +102,7 @@
       <recent name="assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MainTest.main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="assignment3.Main" />
       <module name="Project3_Word_Laddder" />
@@ -116,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.listTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3_Word_Laddder" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +126,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="assignment3" />
       <option name="MAIN_CLASS_NAME" value="assignment3.MainTest" />
-      <option name="METHOD_NAME" value="listTest" />
+      <option name="METHOD_NAME" value="main" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest.main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SampleTest.testParse" />
         <item itemvalue="JUnit.SampleTest.testBFS2" />
         <item itemvalue="JUnit.SampleTest.testBFS1" />
-        <item itemvalue="JUnit.MainTest.listTest" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +202,7 @@
       <workItem from="1676313402729" duration="4923000" />
       <workItem from="1676335565652" duration="20454000" />
       <workItem from="1676487873721" duration="29000" />
-      <workItem from="1676837243980" duration="24705000" />
+      <workItem from="1676837243980" duration="36464000" />
     </task>
     <task id="LOCAL-00001" summary="Starter Code">
       <created>1676109483137</created>
@@ -239,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676868416459</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="completed BFS(all test cases passed). fixed minor bugs">
+      <created>1676872202090</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676872202090</updated>
+    </task>
+    <task id="LOCAL-00007" summary="DFS started">
+      <created>1676880804556</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676880804556</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,20 +288,27 @@
     <MESSAGE value="completed Parse method." />
     <MESSAGE value="made parse method return  the list of words in all caps" />
     <MESSAGE value="completed BFS(Untested version)" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed BFS(Untested version)" />
+    <MESSAGE value="completed BFS(all test cases passed). fixed minor bugs" />
+    <MESSAGE value="DFS started" />
+    <option name="LAST_COMMIT_MESSAGE" value="DFS started" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/assignment3/Main.java</url>
-          <line>134</line>
+          <line>138</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Tests/assignment3/MainTest.java</url>
-          <line>43</line>
+          <line>56</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tests/assignment3/MainTest.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
