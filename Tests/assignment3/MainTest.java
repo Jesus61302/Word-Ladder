@@ -53,11 +53,12 @@ public class MainTest {
     @Test
     public void listTest(){
         Main.initialize();
-        String word = "CHINS";
+        String word = "ZEBRA";
         ArrayList<String> test = Main.differByOneList(word);
         System.out.println(test);
 
     }
+
 
 
 
