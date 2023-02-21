@@ -14,12 +14,10 @@
 
 
 package assignment3;
-import jdk.internal.util.xml.impl.Pair;
 
 import java.util.*;
 import java.io.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Main {
 	
@@ -296,7 +294,7 @@ public class Main {
 		Set<String> words = new HashSet<String>();
 		Scanner infile = null;
 		try {
-			infile = new Scanner (new File("assignment3/five_letter_words.txt")); //delete SRC when testing on Linux
+			infile = new Scanner (new File("five_letter_words.txt")); //delete SRC when testing on Linux
 		} catch (FileNotFoundException e) {
 			System.out.println("Dictionary File not Found!");
 			e.printStackTrace();
